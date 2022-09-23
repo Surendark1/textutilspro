@@ -1,0 +1,29 @@
+<!-- <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>Home</title></head><body></body></html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="header card w-70 text-center">
+        <h1>Welcome to the page !!!</h1>
+    </div>
+    <div class="container">
+        <form action="/analyse" method="post">{% csrf_token %}
+            <textarea class="form-control card w-70 text-center" name="text" id="in_text" placeholder="place your text here !!!" rows="10"></textarea><br>
+            <input type="checkbox" name="rempun">Remove punctuation</input><br>
+            <input type="checkbox" name="remspc">Remove Space</input><br>
+            <input type="checkbox" name="remnxt">Remove Double Space</input><br>
+            <input type="checkbox" name="remnxtln">Remove Nextline Char</input><br>
+            <input type="checkbox" name="charup">String -> STRING</input><br>
+            <button tpye="submit">Text Analysis</button>
+        </form>
+    </div>
+</body>
+</html>
